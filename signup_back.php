@@ -1,14 +1,14 @@
 <?php 
 
-        $secretKey = '6Lf4tAwbAAAAAAj91RKjOSQ6Sy-DqANXxdIhYdgb';
-        $captcha = $_POST['g-recaptcha-response'];
+   //      $secretKey = '6Lf4tAwbAAAAAAj91RKjOSQ6Sy-DqANXxdIhYdgb';
+   //      $captcha = $_POST['g-recaptcha-response'];
 
-        if(!$captcha){
-          echo '<script type ="text/JavaScript">';  
-			echo 'alert("Please fill recaptcha dialog box !")';  
-			echo '</script>'; 
-			echo "<h1><a href='index.php'>Home</a><h1>";
-			exit(0);
+   //      if(!$captcha){
+   //        echo '<script type ="text/JavaScript">';  
+			// echo 'alert("Please fill recaptcha dialog box !")';  
+			// echo '</script>'; 
+			// echo "<h1><a href='index.php'>Home</a><h1>";
+			// exit(0);
           }
 
 session_start();
