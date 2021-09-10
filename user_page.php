@@ -2,12 +2,14 @@
 
 session_start();
 
+
 function updater($fname,$lname){
-            $servername = "localhost";
-            $username = "root";
-            $password = "";
-            $database = "test";
-            $conn = mysqli_connect( $servername , $username , $password , $database );
+            // $servername = "localhost";
+            // $username = "root";
+            // $password = "";
+            // $database = "test";
+            // $conn = mysqli_connect( $servername , $username , $password , $database );
+  include 'config.php';
             
             if( !$conn )
                 die( "something went to worng in our server" . mysqli_connect_error());
@@ -48,11 +50,12 @@ function updater($fname,$lname){
 }
 
 function updater1($newmail){
-            $servername = "localhost";
-            $username = "root";
-            $password = "";
-            $database = "test";
-            $conn = mysqli_connect( $servername , $username , $password , $database );
+            // $servername = "localhost";
+            // $username = "root";
+            // $password = "";
+            // $database = "test";
+            // $conn = mysqli_connect( $servername , $username , $password , $database );
+  include 'config.php';
             
             if( !$conn )
                 die( "something went to worng in our server" . mysqli_connect_error());
@@ -95,11 +98,12 @@ function updater1($newmail){
 
 
 function updater2($newpassword){
-            $servername = "localhost";
-            $username = "root";
-            $password = "";
-            $database = "test";
-            $conn = mysqli_connect( $servername , $username , $password , $database );
+            // $servername = "localhost";
+            // $username = "root";
+            // $password = "";
+            // $database = "test";
+            // $conn = mysqli_connect( $servername , $username , $password , $database );
+  include 'config.php';
             
             if( !$conn )
                 die( "something went to worng in our server" . mysqli_connect_error());
@@ -911,11 +915,12 @@ function myFunction() {
 }
 </script> -->
 <?php
-            $servername = "localhost";
-            $username = "root";
-            $password = "";
-            $database = "test";
-            $conn = mysqli_connect( $servername , $username , $password , $database );
+            // $servername = "localhost";
+            // $username = "root";
+            // $password = "";
+            // $database = "test";
+            // $conn = mysqli_connect( $servername , $username , $password , $database );
+include 'config.php';
             
             if( !$conn )
                 die( "something went to worng in our server" . mysqli_connect_error());

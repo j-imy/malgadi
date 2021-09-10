@@ -5,7 +5,8 @@ if(isset($_SESSION['adminemail']) && isset($_SESSION['adminpassword'])){
 
 		if(isset($_POST['id']) && !empty($_POST['id'])){
 
-			$conn = new mysqli('localhost', 'root', '', 'test');
+			// $conn = new mysqli('localhost', 'root', '', 'test');
+			include '../config.php';
 			if($conn->connect_error){
 			  die("Error in DB connection: ".$conn->connect_errno." : ".$conn->connect_error);    
 			}

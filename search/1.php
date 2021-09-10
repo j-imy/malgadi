@@ -5,7 +5,8 @@ if(isset($_SESSION['adminemail']) && isset($_SESSION['adminpassword'])){
 	if(!empty($_SESSION['adminemail']) && !empty($_SESSION['adminpassword']) && ($_SESSION['adminemail'] == "vashishthchaudhary48@gmail.com") && ($_SESSION['adminpassword'] == "Vasu@121")){
 if(isset($_POST['sear'])){
 	if(!empty($_POST['sear'])){
-		$conn = new mysqli('localhost', 'root', '', 'test');
+		// $conn = new mysqli('localhost', 'root', '', 'test');
+		include '../config.php';
 		if($conn->connect_error){
 		  die("Error in DB connection: ".$conn->connect_errno." : ".$conn->connect_error);    
 		}
@@ -49,7 +50,8 @@ if(isset($_POST['sear'])){
 
 if(isset($_POST['searemail'])){
 	if(!empty($_POST['searemail'])){
-		$conn = new mysqli('localhost', 'root', '', 'test');
+		// $conn = new mysqli('localhost', 'root', '', 'test');
+		include '../config.php';
 		if($conn->connect_error){
 		  die("Error in DB connection: ".$conn->connect_errno." : ".$conn->connect_error);    
 		}
@@ -94,7 +96,8 @@ if(isset($_POST['searemail'])){
 
 if(isset($_POST['searall'])){
 	if(empty($_POST['searall'])){
-		$conn = new mysqli('localhost', 'root', '', 'test');
+		// $conn = new mysqli('localhost', 'root', '', 'test');
+		include '../config.php';
 		if($conn->connect_error){
 		  die("Error in DB connection: ".$conn->connect_errno." : ".$conn->connect_error);    
 		}
