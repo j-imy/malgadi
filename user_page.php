@@ -183,6 +183,8 @@ if(isset($_POST['newpassword'])){
 	</title>
   <link rel="icon" type="image/png" href="img/logo.png"/>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
 <style>
 body {
   margin: 0;
@@ -895,7 +897,7 @@ span.psw {
 </head>
 <body>
 
-<!-- <div class="loader-wrapper">
+<div class="loader-wrapper">
       <span class="loader"><span class="loader-inner"></span></span>&nbsp;&nbsp;&nbsp;<span><font color="white" face="Lucida Console" style="font-size:4vw;"><b>Wait For A Moment</b></font></span>
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -913,7 +915,7 @@ function myFunction() {
     x.className = "topnav";
   }
 }
-</script> -->
+</script>
 <?php
             // $servername = "localhost";
             // $username = "root";

@@ -10,85 +10,15 @@
       <!-- <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"> -->
       <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
       <style type="text/css">
- body {
-    display: flex;
-    min-height: 100vh;
-    flex-direction: column;
-  }
 
-  main {
-    flex: 1 0 auto;
-  }
-  .services .boxes{
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-}
-.services .boxes .box{
-  margin: 20px 0;
-  width: calc(100% / 3 - 20px);
-  text-align: center;
-  border-radius: 12px;
-  padding: 30px 10px;
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.12);
-  cursor: default;
-  transition: all 0.4s ease;
-}
-.services .boxes .box:hover{
-  background: #4070f4;
-  color: #fff;
-}
-.services .boxes .box .icon{
-  height: 50px;
-  width: 50px;
-  background: #4070f4;
-  border-radius: 50%;
-  text-align: center;
-  line-height: 50px;
-  font-size: 18px;
-  color: #fff;
-  margin: 0 auto 10px auto;
-  transition: all 0.4s ease;
-}
-.boxes .box:hover .icon{
-  background-color: #fff;
-  color: #4070f4;
-}
-.services .boxes .box:hover .topic,
-.services .boxes .box:hover p{
-  color: #0E2431;
-  transition: all 0.4s ease;
-}
-.services .boxes .box:hover .topic,
-.services .boxes .box:hover p{
-  color: #fff;
-}
-
-@media (max-width: 1190px) {
-  section .content{
-    width: 85%;
-  }
-}
-@media (max-width: 1000px) {
-  .services .boxes .box{
-    margin: 20px 0;
-    width: calc(100% / 2 - 20px);
-  }
-}
-
-@media (max-width: 750px) {
-  .services .boxes .box{
-    margin: 20px 0;
-    width: 100%;
-  }
-
-}
       </style>
     </head>
 <body>
   <!-- navbar from nav.html -->
   <?php include 'nav.php';?>
 <br><br>
+
+
 <div class="container">
         <div class="slider">
           <ul class="slides">
@@ -111,61 +41,48 @@
       </div>
 
 <br><br><br><br>
-<!-- services -->
 <div class="container">
-<section class="services center-align" id="services">
-   <center><h3>My Services</h3></center>
-   <div class="content">
-     <div class="boxes">
-       <div class="box">
-         <div class="icon">
-           <i class="fa fa-desktop"></i>
-       </div>
-       <div class="topic">C Programming</div>
-       <p>I have provided some projects and links for c programming for you so join my community.</p>
-     </div>
-       <div class="box">
-         <div class="icon">
-           <i class="fa fa-desktop"></i>
-       </div>
-       <div class="topic">C++ Programming</div>
-       <p>I have provided some projects and links for c++ programming for you so join my community.</p>
-     </div>
-       <div class="box">
-         <div class="icon">
-           <i class="fa fa-desktop"></i>
-       </div>
-       <div class="topic">Python Programming</div>
-       <p>I have provided some projects and links for python programming for you so join my community.</p>
-     </div>
-       <div class="box">
-         <div class="icon">
-           <i class="fa fa-android"></i>
-       </div>
-       <div class="topic">Web Design With Html</div>
-       <p>I have provided some videos and some important link on html for you so join my community.</p>
-     </div>
-       <div class="box">
-         <div class="icon">
-           <i class="fa fa-tablet"></i>
-       </div>
-       <div class="topic">JAVASCRIPT</div>
-       <p>I have provided some important link on javascript for you so join my community.</p>
-     </div>
-       <div class="box">
-         <div class="icon">
-           <i class="fa fa-android"></i>
-       </div>
-       <div class="topic">SQL</div>
-       <p>I have provided some videos and some important link on SQL for you so join my community.</p>
-     </div>
-   </div>
-   </div>
- </section><br><br>
+  <ul class="collection with-header">
+        <li class="collection-header"><h4>Recent Members</h4></li>
+  <?php
+
+  include 'config.php';
+
+  if( !$conn )
+        die( "something went to worng in our server" . mysqli_connect_error());
+
+      $table_name = "malgadi";
+
+            $sql = "SELECT * FROM `$table_name`";
+
+            $result = mysqli_query( $conn , $sql );
+
+            
+            if( !$result )
+                    die( "Something went wrong" );
+
+
+                  $i = 0;
+             while( $row=mysqli_fetch_assoc($result) )
+            { 
+                if($i == 3)
+                  break;
+                echo "<li class='collection-item'><div>" . $row['first_name'] . " " . $row['last_name'] . "<a href='mailto:" . $row['email'] . "' class='secondary-content'><i class='material-icons'>send</i></a></div></li>";
+                $i ++;
+            }
+
+
+   ?>
+      </ul>
+</div>          
+
+<br><br>
+
+<div class="container"><br>
  <h3 class="center-align">Work Sample</h3><br>
-      <!-- <div class="video-container">
+      <div class="video-container">
         <iframe width="853" height="480" src="//www.youtube.com/embed/-1DbdPvNSBc" frameborder="0" allowfullscreen></iframe>
-      </div> -->
+      </div>
 
 </div> <br><br><br>
 
@@ -179,10 +96,10 @@
               <div class="col l4 offset-l2 s12">
                 <h5 class="white-text">Important Links</h5>
                 <ul>
-                  <li><a class="grey-text text-lighten-3" href="#!">Home</a></li>
-                  <li><a class="grey-text text-lighten-3" href="#!">Signup</a></li>
-                  <li><a class="grey-text text-lighten-3" href="#!">Login</a></li>
-                  <li><a class="grey-text text-lighten-3" href="#!">Contact-form</a></li>
+                  <li><a class="grey-text text-lighten-3" href="index.php">Home</a></li>
+                  <li><a class="grey-text text-lighten-3" href="#modal2">Signup</a></li>
+                  <li><a class="grey-text text-lighten-3" href="#modal1">Login</a></li>
+                  <li><a class="grey-text text-lighten-3" href="#about">About</a></li>
                 </ul>
               </div>
             </div>
@@ -242,7 +159,6 @@
                     <label for="password">Password</label>
                   </div>
                 </div>
-                <div class="right"><a href="forgot.php">Forgot Passworord ?</a></div>
                 <button type="submit" class="btn btn-large blue">Login</button>
               </form>
             </div>
@@ -285,6 +201,8 @@
         </div>
 
 
+
+
         <!-- video demo -->
 
 
@@ -299,6 +217,7 @@
           $(document).ready(function(){
           $('.slider').slider(); });
           $('.modal').modal();
+
     </script>
 </body>
   </html>

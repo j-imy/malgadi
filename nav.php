@@ -10,6 +10,7 @@
         <li><a href="#modal2"><i class="material-icons">group_add</i>Signup</a></li>
       </ul>
   <!-- navbar -->
+  <div class="navbar-fixed">
        <nav>
       <div class="nav-wrapper blue">
         <a href="index.php" class="brand-logo">
@@ -19,18 +20,19 @@
         <a href="index.php" class="brand-logo center hide-on-med-and-down">Vashishth Community</a>
         <ul class="right hide-on-med-and-down">
           <li><a href="index.php" class="waves-effect">Home</a></li>
-          <li><a href="#" class="waves-effect">About</a></li>
+          <li><a href="#about" class="waves-effect">About</a></li>
           <li><a href="" class="dropdown-button waves-effect" data-activates="dropdown2">Join<i class="material-icons right">arrow_drop_down</i></a></li>
           <li><a href="#modal3" class="waves-effect">Admin</a></li>
         </ul>
         <ul class="side-nav blue lighter" id="mobile-demo">
           <li><a href="index.php" class="white-text waves-effect">Home</a></li>
-          <li><a href="#" class="white-text waves-effect">About</a></li>
+          <li><a href="#about" class="white-text waves-effect">About</a></li>
           <li><a href="" class="dropdown-button white-text" data-activates="dropdown1">Join<i class="material-icons right">arrow_drop_down</i></a></li>
           <li><a href="#modal3" class="white-text waves-effect">Admin</a></li>
         </ul>
       </div>
     </nav>
+  </div>
 
     <div class="fixed-action-btn">
           <a class="btn-floating red btn-large hoverable"><i class="large material-icons">wc</i></a>
